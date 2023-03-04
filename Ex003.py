@@ -1,7 +1,4 @@
-print("Digite sua data de nascimento\n")
-dia = input("Dia: ")
-mes = input("Mês: ")
-ano = input("Ano: ")
-
-print("Vc nasceu no dia {} de {} de {}. Correto?".format(dia, mes, ano))
-
+# Programa que lê dois números e mostra a soma entre eles.
+num1 = int(input("Digite o primeiro o número: "))
+num2 = int(input("Digite o segundo número: "))
+print("{} + {} = {}".format(num1, num2, num1 + num2))
