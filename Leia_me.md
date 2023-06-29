@@ -1,0 +1,1 @@
+Tem pendente com os exercícios: 23, 26
