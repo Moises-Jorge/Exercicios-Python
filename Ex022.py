@@ -10,5 +10,5 @@ nameToList = nome.split()
 
 print("1-", nome.upper())
 print("2-", nome.lower())
-print("3- {} letras ao todo".format(len(''.join(nome.split()))))
+print("3- {} letras ao todo".format(len(''.join(nome.split())))) # Outra forma: print("3- {} letras ao todo".format(len(nome) - nome.count(' ')))
 print("4- {} letras no primeiro nome!".format(len(nameToList[0])))

@@ -6,5 +6,5 @@
 frase = str(input('Digite uma frase: '))
 
 print('Quantas vezes aparece a letra "A"?: ', frase.count('a'))
-print('Em que posição aparece pela primeira vez?: ', frase.find('a'))
-#print('Em que posição aparece pela ultima vez?: ', )
+print('Em que posição aparece pela primeira vez?: ', frase.find('a') + 1)
+print('Em que posição aparece pela ultima vez?: ', frase.rfind('a') + 1)

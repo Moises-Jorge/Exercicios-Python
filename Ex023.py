@@ -5,11 +5,13 @@
     * Centena: 8
     * Milhar: 1
 """
-numero = input("Digite um numero no intervalo [0, 9999]: ")
+numero = int(input("Digite um numero no intervalo [0, 9999]: "))
+unidade = numero / 1 % 10
+dezena = numero / 10 % 10
+centena = numero / 100 % 10
+milhar = numero / 1000 % 10
 
-print("Unidade: " + numero[3])
-print("Dezena: "  + numero[2])
-print("Centena: " + numero[1])
-print("Milhar: "  + numero[0])
-
-# REFAZER ESSE EXERCÍCIO! NÃO RESOLVE O PROBLEMA
+print("Unidade: ", int(unidade))
+print("Dezena: " , int(dezena))
+print("Centena: ", int(centena))
+print("Milhar: " , int(milhar))
