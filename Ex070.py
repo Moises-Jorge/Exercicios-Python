@@ -15,10 +15,7 @@ while True:
     preco_total += preco
     if preco > 1000:
         produtos_caros += 1
-    if qtd_produtos == 1:
-        preco_produto_barato = preco
-        nome_produto_barato = nome_produto
-    elif preco < preco_produto_barato:
+    if qtd_produtos == 1 or preco < preco_produto_barato:
         preco_produto_barato = preco
         nome_produto_barato = nome_produto
     # Verificacao se o usuario deseja continuar

@@ -13,10 +13,8 @@ while True:
         opcao = str(input('Par ou Impar? [P/I]: ')).strip().upper()[0]
     
     print('-' * 30)
-    if resultado % 2 == 0:
-        print(f'Voce jogou {num_pessoa} e o computador {num_pc}. Total deu {resultado} e DEU PAR')
-    else:
-        print(f'Voce jogou {num_pessoa} e o computador {num_pc}. Total deu {num_pessoa + num_pc} e DEU IMPAR')
+    print(f'Voce jogou {num_pessoa} e o computador {num_pc}.', end='')
+    print(f'Total deu {resultado} e DEU PAR' if resultado % 2 == 0 else f'Total deu {num_pessoa + num_pc} e DEU IMPAR')
     print('-' * 30)
     
     if resultado % 2 == 0 and opcao == 'P':
