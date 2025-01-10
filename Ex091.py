@@ -16,5 +16,6 @@ print('  == RANKING DOS JOGADORES ==')
 jogadores_ordenados = {k: v for k, v in sorted(jogadores.items(), key=lambda item: item[1], reverse=True)}
 c = 0
 for key, value in jogadores_ordenados.items():
-    print(f'{c+1:>4} lugar: {key} com {value}.')
+    print(f'{c+1:>4}º lugar: {key} com {value}.')
+    sleep(1)
     c += 1
