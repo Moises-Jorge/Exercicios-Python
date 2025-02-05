@@ -1,4 +1,4 @@
-'''ENUNCIADO DO EXERCICIO'''
+'''Crie um programa que tenha uma função chamada voto() que vai receber como parâmetro o ano de nascimento de uma pessoa, retornando um literal indicando se uma pessoa tem voto NEGADO, OPCIONAL ou OBRIGATÓRIO nas eleições.'''
 def  voto(ano_nasci):
     from datetime import datetime
     ano_actual = 2018#datetime.now().year
