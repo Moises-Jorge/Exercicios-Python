@@ -1,4 +1,12 @@
 def factorial(n):
+    """ -> Funcao que recebe um numero e calcula o factorial desse mesmo numero
+
+    Args:
+        n (inteiro): O numero que sera calculado o seu factorial
+
+    Returns:
+        inteiro: resultado do factorial do numero que veio como parametro
+    """
     f = 1
     for cont in range(1, n+1):
         f *= cont
