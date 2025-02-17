@@ -39,9 +39,37 @@ def ler_arquivo(nome_arquivo) -> None:
     """
     from lib.interface import cabecalho
     try:
-        arquivo = open(nome_arquivo, 'rt')
+        arquivo = open(nome_arquivo, 'rt') # Abrindo o arquivo
     except:
         print('Erro ao ler o arquivo!')
     else:
         cabecalho('PESSOAS CADASTRADAS')
-        print(arquivo.read())
+        for linha in arquivo: # Mostrando o conteudo do arquivo
+            dado = linha.split(';') # Transformando cada linha em uma lista (eliminando o ;)
+            dado[1] = dado[1].replace('\n', '') # Eliminando a quebra de linha
+            print(f'{dado[0]:<30}{dado[1]:>3} anos')
+    finally:
+        arquivo.close() # Fechando o arquivo no final de tudo
+        
+
+def cadastrar_pessoa(nome_arquivo, nome: str = 'desconhecido', idade: int = 0) -> None:
+    """-> Funcao que cadastra uma nova pessoa no arquivo
+
+    Args:
+        nome_arquivo (.txt): Arquivo onde sera armazenado os dados
+        nome (str, optional): Nome da pessoa que vai ser cadastrada. Defaults to 'desconhecido'.
+        idade (int, optional): Idade da pessoa que vai ser cadastrada. Defaults to 0.
+    """
+    try:
+        arquivo = open(nome_arquivo, 'at') # at -> "append text": adicionar dados no arquivo
+    except:
+        print('Houve um ERRO na abertura do arquivo!')
+    else:
+        try:
+            arquivo.write(f'{nome};{idade}\n')
+        except:
+            print('Houve um ERRO na hora de escrever os dados')
+        else:
+            print(f'Novo registro de {nome} adicionado!')
+    finally:
+        arquivo.close()
