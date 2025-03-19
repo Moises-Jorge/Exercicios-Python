@@ -1,0 +1,2 @@
+import utils # Essa importacao daria ERRO se esse diretorio nao fosse um "Diretorio Python (Pacote)". Diretorio Python/Pacote eh aquele que tem o modulo "__init__.py". O modulo "__init__.py" eh o modulo que eh executado por padrao quando se faz uma importacao desse jeito (sem especificar o modulo, apenas importando o diretorio)
+print(utils.soma(2, 3))
